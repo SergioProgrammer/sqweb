@@ -1,2 +1,0 @@
-# sqweb
-página web sq

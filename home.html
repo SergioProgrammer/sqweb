@@ -1,0 +1,260 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaraQuintana</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+   
+
+    <div class="banner">
+         <h2></h2>
+         <img src="{% static 'images/sqbackground.png' %}" alt="Banner" class="full-width-banner">
+    </div>
+
+    <div class="section-title">Nuestros Servicios</div>
+    <div class="grid-container">
+        <div class="grid">
+            <div class="grid-item">
+                <img src="{% static 'images/de (1).png' %}" alt="Logotipos">
+                <h3>Diseño Editorial</h3>
+                <p>Maquetación de memorias corporativas, lirbos, revistas, infografías; diseño de portadas.</p>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/dg (1).png' %}" alt="Creatividad Publicitaria">
+                <h3>Diseño Gráfico</h3>
+                <p>Diseño de infografías, carteleria, señaletica y espacios, ilustraciones; ideantidad corporativa; packaging.</p>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/md360 (1).png' %}" alt="Videos Creativos">
+                <h3>Marketing 360°</h3>
+                <p>Estrastegias en comunicación y publicidad para lanzar tu negocio en el mercado</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <img src="{% static 'images/epmt.png' %}" alt="SQ Editorial">
+    </div>
+
+    <div class="grid-container">
+        <div class="grid">
+            <div class="two-column-grid-item">
+                <h2>¿Qué es el diseño gráfico para nosotros?</h2>
+                <p>El diseño gráfico es una disciplina que combina creatividad y tecnología para comunicar ideas a través de imágenes, tipografía y diseño. Es una herramienta esencial para construir la identidad visual de una marca y transmitir su mensaje de manera efectiva.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="{% static 'images/sqbanner.jpg' %}" alt="SQ Editorial">
+    </div>
+
+    <div class="cta-section">
+        <h2>¿Estás listo para transformar tu marca?</h2>
+        <p>Contáctanos para llevar tu identidad al siguiente nivel.</p>
+        <button class="cta-button">Contáctanos</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SQ Maquetación Editorial y Diseño Gráfico. Todos los derechos reservados.</p>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #222, #000);
+    color: #fff;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Header */
+header {
+    background-color: #000;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    overflow: hidden;
+    background: url("{% static 'images/sqbackground.png' %}") center/cover no-repeat;
+    height: calc(50vh + 368.8px);
+    /* Incrementa la altura en 1 cm */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 64px;
+    font-weight: 400;
+    color: #f7ff44;
+    text-shadow: 0 4px 6px rgba(252, 255, 83, 0.5);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+}
+
+/* Grid Section */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    background-color: #000;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    flex: 1 1 calc(16.66% - 10px);
+    /* 6 items per row */
+    box-sizing: border-box;
+    margin: 5px;
+    text-align: center;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.grid-item img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.grid-item h3 {
+    font-size: 1em;
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+.grid-item p {
+    font-size: 0.9em;
+    margin: 0;
+    color: #ccc;
+}
+
+
+.cta-section {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 60px;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #000;
+    color: #bbb;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.image-container {
+    text-align: center;
+    margin: 00px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
